@@ -1,16 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: base
+  name: apps
 spec:
   destination:
     name: in-cluster
     namespace: argocd
   project: default
   source:
-    path: argocd/base
+    path: argocd/apps
     repoURL: https://github.com/amirmarmul/argocd-guide.git
     targetRevision: HEAD
+    directory: 
+      recursive: true
   syncPolicy:
     automated:
       selfHeal: true
