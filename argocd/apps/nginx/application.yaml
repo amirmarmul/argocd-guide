@@ -5,7 +5,7 @@ metadata:
 spec:
   project: default
   source:
-    path: argocd/apps
+    path: argocd/apps/nginx
     repoURL: https://github.com/amirmarmul/argocd-guide.git
     targetRevision: HEAD
   destination:
