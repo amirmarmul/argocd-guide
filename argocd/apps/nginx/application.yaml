@@ -5,12 +5,12 @@ metadata:
 spec:
   project: default
   source:
-    path: argocd/apps/nginx
+    path: .
     repoURL: https://github.com/amirmarmul/argocd-guide.git
     targetRevision: HEAD
   destination:
     name: in-cluster
-    namespace: default
+    namespace: nginx
   syncPolicy:
     automated:
       selfHeal: true
