@@ -13,6 +13,8 @@ spec:
     path: argocd/apps
     repoURL: https://github.com/amirmarmul/argocd-guide.git
     targetRevision: HEAD
+    directory:
+      recurse: true
   syncPolicy:
     automated:
       selfHeal: true
