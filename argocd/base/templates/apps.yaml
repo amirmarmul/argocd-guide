@@ -15,4 +15,4 @@ spec:
       recurse: true
   syncPolicy:
     automated:
-      selfHeal: false
+      selfHeal: true
