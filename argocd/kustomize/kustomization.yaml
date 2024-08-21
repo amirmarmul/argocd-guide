@@ -14,4 +14,3 @@ patches:
     kind: Deployment
     name: argocd-server
     version: v1
-    
