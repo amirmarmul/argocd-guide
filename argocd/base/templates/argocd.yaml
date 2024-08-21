@@ -11,6 +11,9 @@ spec:
     chart: argo-cd
     repoURL: https://argoproj.github.com/argo-helm
     targetRevision: 7.4.4
+    helm: 
+      valueFiles:
+      - values/argocd.yaml
   syncPolicy:
     automated:
       selfHeal: true
