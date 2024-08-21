@@ -8,7 +8,7 @@ resources:
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.12.1/manifests/install.yaml
 
 patches:
-- path: overlays/deploy-command.yaml
+- path: overlays/argocd-server-patch.yaml
   target:
     group: apps
     kind: Deployment
