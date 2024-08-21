@@ -1,3 +1,0 @@
-kustomize:
-  images:
-  - kacestudio/custom:4.1
