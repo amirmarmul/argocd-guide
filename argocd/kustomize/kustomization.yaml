@@ -6,3 +6,6 @@ resources:
 - base/argocd.yaml
 - base/argocd-apps.yaml
 - https://raw.githubusercontent.com/argoproj/argo-cd/v2.12.1/manifests/install.yaml
+
+patchesStrategicMerge:
+- overlays/argocd-secret.yaml
