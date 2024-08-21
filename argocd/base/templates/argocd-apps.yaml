@@ -14,7 +14,7 @@ spec:
     helm:
       valuesObject:
         applications:
-          nginx:
+          - name: nginx
             finalizers:
             - resources-finalizer.argocd.argoproj.io
             project: default
@@ -32,7 +32,7 @@ spec:
             info:
             - name: url
               value: http://localhost/
-          shop:
+          - name: shop
             finalizers:
             - resources-finalizer.argocd.argoproj.io
             project: default
@@ -47,7 +47,7 @@ spec:
               automated:
                 prune: true
                 selfHeal: true
-          custom:
+          - name: custom
             finalizers:
             - resources-finalizer.argocd.argoproj.io
             project: default
