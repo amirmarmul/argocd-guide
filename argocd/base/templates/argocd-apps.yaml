@@ -61,6 +61,7 @@ spec:
               path: argocd/apps/custom
               repoURL: https://github.com/amirmarmul/argocd-guide.git
               targetRevision: HEAD
+              kustomize: {}
             syncPolicy:
               automated:
                 prune: true
