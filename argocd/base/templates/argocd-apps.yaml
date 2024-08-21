@@ -12,7 +12,7 @@ spec:
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 2.0.0
     helm:
-      valuesObject:
+      values: |
         applications:
           nginx:
             finalizers:
