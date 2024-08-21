@@ -1,0 +1,19 @@
+apps:
+  nginx:
+    finalizers:
+    - resources-finalizer.argocd.argoproj.io
+    project: default
+    destination:
+      name: in-cluster
+      namespace: default
+    source:
+      path: argocd/apps/nginx
+      repoURL: https://github.com/amirmarmul/argocd-guide.git
+      targetRevision: HEAD
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+    info:
+    - name: url
+      value: http://localhost/
