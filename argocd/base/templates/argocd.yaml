@@ -7,13 +7,17 @@ spec:
     name: in-cluster
     namespace: argocd
   project: default
-  source:
-    chart: argo-cd
+  sources:
+  - chart: argo-cd
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 7.4.4
     helm: 
       valueFiles:
-      - values/argocd.yaml
+      - $values/argocd.yaml
+  - path: argocd/base/values
+    ref: values
+    repoURL: https://github.com/amirmarmul/argocd-guide.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       selfHeal: true
