@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argo-cd
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  project: default
+  source:
+    chart: argo-cd
+    repoURL: https://argoproj.github.com/argo-helm
+    targetRevision: 7.4.4
+  syncPolicy:
+    automated:
+      selfHeal: true
