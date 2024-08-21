@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+VERSION=$1
+
+docker buildx build -t kacestudio/custom:$VERSION --push .
