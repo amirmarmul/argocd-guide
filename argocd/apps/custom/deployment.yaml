@@ -13,7 +13,6 @@ spec:
     spec:
       containers:
       - name: custom
-        image: docker.io/kacestudio/custom
         resources:
           limits:
             memory: "128Mi"
