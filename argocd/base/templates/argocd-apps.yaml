@@ -47,10 +47,7 @@ spec:
               automated:
                 prune: true
                 selfHeal: true
-          custom:
-            additionalLabels:
-              app: custom
-              tier: frontend
+          silanu:
             additionalAnnotations:
               argocd-image-updater.argoproj.io/image-list: docker.io/kacestudio/custom:latest
               argocd-image-updater.argoproj.io/write-back-method: git
