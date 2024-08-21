@@ -1,6 +1,0 @@
-resources:
-- deployment.yaml
-
-images:
-- name: kacestudio/custom
-  newTag: "3.0"
