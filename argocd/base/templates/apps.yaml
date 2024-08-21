@@ -10,7 +10,7 @@ spec:
   source:
     chart: argocd-apps
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 1.6.1
+    targetRevision: 2.0.0
   syncPolicy:
     automated:
       selfHeal: true
