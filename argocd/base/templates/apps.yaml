@@ -11,6 +11,23 @@ spec:
     chart: argocd-apps
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 2.0.0
+    helm:
+      applications:
+        nginx:
+          finalizers:
+          - resources-finalizer.argocd.argoproj.io
+          project: default
+          destination:
+            name: in-cluster
+            namespace: default
+          source:
+            path: argocd/apps/nginx
+            repoURL: https://github.com/amirmarmul/argocd-guide.git
+            targetRevision: HEAD
+          syncPolicy:
+            automated:
+              prune: true
+              selfHeal: true
   syncPolicy:
     automated:
       selfHeal: true
