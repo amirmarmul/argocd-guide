@@ -11,3 +11,6 @@ spec:
     path: argocd/base
     repoURL: https://github.com/amirmarmul/argocd-guide.git
     targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
