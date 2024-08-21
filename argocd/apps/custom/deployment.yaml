@@ -13,6 +13,7 @@ spec:
     spec:
       containers:
       - name: custom
+        image: kacestudio/custom
         resources:
           limits:
             memory: "128Mi"
