@@ -49,7 +49,7 @@ spec:
                 selfHeal: true
           silanu:
             additionalAnnotations:
-              argocd-image-updater.argoproj.io/image-list: kacestudio/custom:3.0
+              argocd-image-updater.argoproj.io/image-list: kacestudio/custom:3.x
               argocd-image-updater.argoproj.io/write-back-method: git
             finalizers:
             - resources-finalizer.argocd.argoproj.io
