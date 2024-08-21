@@ -48,6 +48,9 @@ spec:
                 prune: true
                 selfHeal: true
           custom:
+            annotations:
+            - argocd-image-updater.argoproj.io/image-list: docker.io/kacestudio/custom
+            - argocd-image-updater.argoproj.io/write-back-method: git
             finalizers:
             - resources-finalizer.argocd.argoproj.io
             project: default
